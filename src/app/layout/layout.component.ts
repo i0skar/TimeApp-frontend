@@ -11,6 +11,6 @@ export class LayoutComponent {
 
   logout() {
     localStorage.clear();
-    this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/');
   }
 }

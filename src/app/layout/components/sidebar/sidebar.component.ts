@@ -11,17 +11,17 @@ export class SidebarComponent implements OnInit {
   sidebarLinks: SidebarLink[] = [
     {
       group: 'Raporty',
-      links: [{ name: 'Raporty', href: '' }],
+      links: [{ name: 'Raporty', href: 'layout' }],
       access: ['pracownik', 'lider', 'admin']
     },
     {
       group: 'Panel kierownika',
-      links: [{ name: 'Raporty', href: 'leader-panel' }],
+      links: [{ name: 'Raporty', href: 'layout/leader-panel' }],
       access: ['lider', 'admin']
     },
     {
       group: 'Panel admina',
-      links: [{ name: 'Użytkownicy', href: 'admin-panel' }],
+      links: [{ name: 'Użytkownicy', href: 'layout/admin-panel' }],
       access: ['admin']
     },
   ];
