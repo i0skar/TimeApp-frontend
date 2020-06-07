@@ -1,0 +1,9 @@
+<h2 class="main-header">Aktywne</h2>
+<ng-container *ngFor="let raport of raports.false">
+  <app-raport [raport]="raport" (click)="openDetailsPopup(raport)"></app-raport>
+</ng-container>
+
+<h2 class="main-header">Zamknięte</h2>
+<ng-container *ngFor="let raport of raports.true">
+  <app-raport [raport]="raport" (click)="openDetailsPopup(raport)"></app-raport>
+</ng-container>

@@ -1,0 +1,14 @@
+@import 'src/styles/abstracts/mixins.scss';
+
+mat-form-field {
+  width: calc(50% - 10px);
+}
+
+.week-update {
+  [mat-dialog-content] {
+    height: 320px;
+  }
+  .project {
+    @include display-flex(row, space-between, center);
+  }
+}

@@ -1,0 +1,20 @@
+@import 'src/styles/abstracts/mixins.scss';
+
+.add-employee {
+  mat-form-field {
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  &__name {
+    @include display-flex(row, space-between, center);
+    mat-form-field {
+      width: calc(50% - 10px);
+    }
+  }
+
+  .password_suffix {
+    cursor: pointer;
+    color: #8a8a8a;
+  }
+}

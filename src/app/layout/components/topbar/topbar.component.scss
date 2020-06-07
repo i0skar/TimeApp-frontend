@@ -1,0 +1,12 @@
+@import 'src/styles/abstracts/mixins.scss';
+
+mat-toolbar {
+  @include display-flex(row, space-between, center);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-section {
+  @include display-flex(row, space-between, center);
+}

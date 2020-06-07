@@ -1,0 +1,28 @@
+@import 'src/styles/abstracts/variables.scss';
+@import 'src/styles/abstracts/functions.scss';
+@import 'src/styles/abstracts/mixins.scss';
+
+@import 'src/styles/themes/orange-theme.scss';
+
+@import 'src/styles/components/card.scss';
+@import 'src/styles/components/tab.scss';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+
+.main-header {
+  padding-left: 15px;
+}

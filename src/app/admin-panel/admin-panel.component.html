@@ -1,0 +1,17 @@
+<section class="admin-panel">
+  <section class="admin-panel__header">
+    <h2 class="main-header">Pracownicy</h2>
+    <button mat-raised-button color="primary" (click)="openAddEmployeePopup()">
+      <mat-icon>add</mat-icon>Dodaj pracownika
+    </button>
+  </section>
+  <ng-container *ngFor="let employee of employees.Pracownik">
+    <app-employee [employee]="employee" (deleteEmployee)="openDeleteEmployeePopup(employee)"></app-employee>
+  </ng-container>
+  <section class="header">
+    <h2 class="main-header">Kierownicy</h2>
+  </section>
+  <ng-container *ngFor="let employee of employees.Kierownik">
+    <app-employee [employee]="employee" (deleteEmployee)="openDeleteEmployeePopup(employee)"></app-employee>
+  </ng-container>
+</section>

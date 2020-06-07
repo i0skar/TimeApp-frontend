@@ -1,0 +1,11 @@
+<section class="week">
+  <div>
+    <span class="week__week-number">Tydzień {{ week.week }}: {{ week.workedHours }}h</span>/{{ week.hoursInWeek }}h
+    <div class="week__project-names">
+      <ng-container *ngFor="let project of week.projects">
+        [{{ project.name }}] - {{ project.workedHours }}h<br />
+      </ng-container>
+    </div>
+  </div>
+  <button mat-stroked-button color="primary" *ngIf="!isClosed" (click)="updateWeek.emit(week)">AKTUALIZUJ</button>
+</section>

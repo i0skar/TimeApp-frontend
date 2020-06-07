@@ -1,0 +1,10 @@
+<section class="card" [ngClass]="{ card__accepted: closedRaport.isAccepted }">
+  <div>
+    <p *ngIf="closedRaport.isAccepted" class="accepted-label">Zaakceptowane</p>
+    <h2>{{ closedRaport.user }}: {{ closedRaport.month }}</h2>
+    <p>{{ closedRaport.userEmail }}</p>
+  </div>
+  <div>
+    <span class="working-hours">{{ closedRaport.workedHours }}h</span> /{{ closedRaport.hoursInMonth }}h
+  </div>
+</section>

@@ -1,0 +1,390 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Katarzyna",
+      "surname": "Cichopek",
+      "password": "$2a$10$teUUQ6NvJum9JSTn2.P.m.Te5xY6Hn5IGGqyAnEM4XUqqfvOLNSBG",
+      "email": "katarzyna.cichopek@gmail.com",
+      "status": "Pracownik"
+    },
+    {
+      "id": 2,
+      "name": "Oskar",
+      "surname": "Brudnowski",
+      "password": "$2a$10$teUUQ6NvJum9JSTn2.P.m.Te5xY6Hn5IGGqyAnEM4XUqqfvOLNSBG",
+      "email": "oskar.brudnowski@gmail.com",
+      "status": "Pracownik"
+    },
+    {
+      "id": 3,
+      "name": "Jolanta",
+      "surname": "Czajniczek",
+      "password": "$2a$10$teUUQ6NvJum9JSTn2.P.m.Te5xY6Hn5IGGqyAnEM4XUqqfvOLNSBG",
+      "email": "jolanta.czajniczek@gmail.com",
+      "status": "Kierownik"
+    },
+    {
+      "email": "ola.parasolka@gmail.com",
+      "password": "$2a$10$teUUQ6NvJum9JSTn2.P.m.Te5xY6Hn5IGGqyAnEM4XUqqfvOLNSBG",
+      "name": "Ola",
+      "surname": "Parasolka",
+      "status": "Pracownik",
+      "id": 5
+    },
+    {
+      "email": "jakub.fasa@gmail.com",
+      "password": "$2a$10$teUUQ6NvJum9JSTn2.P.m.Te5xY6Hn5IGGqyAnEM4XUqqfvOLNSBG",
+      "name": "Jakub",
+      "surname": "Fasa",
+      "status": "Kierownik",
+      "id": 8
+    },
+    {
+      "email": "karol@gmail.com",
+      "password": "$2a$10$eH70F0fNKdYRJ.PqyE1PoexT/zd8J/xD0J25VWZuIO8WQjSUaUapy",
+      "name": "Karol",
+      "surname": "Karolewski",
+      "status": "Pracownik",
+      "id": 9
+    }
+  ],
+  "raports": [
+    {
+      "id": 1,
+      "userEmail": "oskar.brudnowski@gmail.com",
+      "user": "Oskar Brudnowski",
+      "month": "Marzec 2020",
+      "hoursInMonth": 120,
+      "workedHours": 160,
+      "projects": [
+        {
+          "name": "Projekt zespołowy 2020",
+          "workedHours": 100
+        },
+        {
+          "name": "Przedmiot fakultatywny",
+          "workedHours": 8
+        },
+        {
+          "name": "Sztuczna inteligencja",
+          "workedHours": 10
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Projekt zespołowy 2020",
+              "workedHours": 20
+            },
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 20
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "hoursInWeek": 40,
+          "workedHours": 20,
+          "projects": [
+            {
+              "name": "Projekt zespołowy 2020",
+              "workedHours": 20
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 40
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 40
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "hoursInWeek": 8,
+          "workedHours": 2,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 2
+            }
+          ]
+        }
+      ],
+      "isClosed": false,
+      "isAccepted": false
+    },
+    {
+      "id": 2,
+      "userEmail": "oskar.brudnowski@gmail.com",
+      "user": "Oskar Brudnowski",
+      "month": "Kwiecień 2020",
+      "hoursInMonth": 120,
+      "workedHours": 160,
+      "projects": [
+        {
+          "name": "Projekt zespołowy 2020",
+          "workedHours": 100
+        },
+        {
+          "name": "Przedmiot fakultatywny",
+          "workedHours": 8
+        },
+        {
+          "name": "Sztuczna inteligencja",
+          "workedHours": 10
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Projekt zespołowy 2020",
+              "workedHours": 20
+            },
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 20
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Projekt zespołowy 2020",
+              "workedHours": 20
+            },
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 20
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 40
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 40
+            }
+          ]
+        }
+      ],
+      "isClosed": false,
+      "isAccepted": false
+    },
+    {
+      "id": 3,
+      "userEmail": "oskar.brudnowski@gmail.com",
+      "user": "Oskar Brudnowski",
+      "month": "Maj 2020",
+      "hoursInMonth": 160,
+      "workedHours": 108,
+      "projects": [
+        {
+          "name": "Projekt zespołowy 2020",
+          "workedHours": 100
+        },
+        {
+          "name": "Przedmiot fakultatywny",
+          "workedHours": 8
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Projekt zespołowy 2020",
+              "workedHours": 20
+            },
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 20
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Projekt zespołowy 2020",
+              "workedHours": 20
+            },
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 20
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 40
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 40
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "hoursInWeek": 8,
+          "workedHours": 2,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 2
+            }
+          ]
+        }
+      ],
+      "isClosed": false,
+      "isAccepted": false
+    },
+    {
+      "id": 4,
+      "userEmail": "oskar.brudnowski@gmail.com",
+      "user": "Oskar Brudnowski",
+      "month": "Luty 2020",
+      "hoursInMonth": 160,
+      "workedHours": 108,
+      "projects": [
+        {
+          "name": "Projekt zespołowy 2020",
+          "workedHours": 100
+        },
+        {
+          "name": "Przedmiot fakultatywny",
+          "workedHours": 8
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Projekt zespołowy 2020",
+              "workedHours": 20
+            },
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 20
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Projekt zespołowy 2020",
+              "workedHours": 20
+            },
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 20
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 40
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "hoursInWeek": 40,
+          "workedHours": 40,
+          "projects": [
+            {
+              "name": "Przedmiot fakultatywny",
+              "workedHours": 40
+            }
+          ]
+        }
+      ],
+      "isClosed": false,
+      "isAccepted": false
+    }
+  ],
+  "projects": [
+    {
+      "name": "Projekt zespołowy",
+      "workedHours": 120
+    },
+    {
+      "name": "Sztuczna inteligencja",
+      "workedHours": 100
+    },
+    {
+      "name": "Systemy wbudowane",
+      "workedHours": 130
+    }
+  ]
+}

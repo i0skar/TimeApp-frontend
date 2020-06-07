@@ -1,0 +1,29 @@
+<section class="week-update">
+  <h2 mat-dialog-title>Aktualizuj {{ updatingMonth }}: Tydzień {{ updatingWeek.week }}</h2>
+  <section mat-dialog-content>
+    <form [formGroup]="updateWeekForm">
+      <div formArrayName="projects" *ngFor="let project of updateWeekForm.get('projects').controls; let i = index">
+        <div class="project" [formGroupName]="i">
+          <mat-form-field appearance="fill">
+            <mat-label>Projekt</mat-label>
+            <mat-select matNativeControl required formControlName="name">
+              <mat-option value="Pracownik">Pracownik</mat-option>
+              <mat-option value="Kierownik">Kierownik</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Godziny</mat-label>
+            <input type="number" formControlName="workedHours" autocomplete="off" matInput />
+          </mat-form-field>
+          <button mat-stroked-button color="warn">USUŃ</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <button mat-stroked-button color="primary" (click)="addProject()">DODAJ PROJEKT</button>
+
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button color="primary" (click)="abortUpdate.emit()">ANULUJ</button>
+    <button mat-flat-button color="primary" (click)="updateWeek()">AKTUALIZUJ</button>
+  </mat-dialog-actions>
+</section>

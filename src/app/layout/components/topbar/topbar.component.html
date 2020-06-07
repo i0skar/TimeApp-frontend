@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <section class="logo-section">
+    <button mat-icon-button (click)="sidebarToggle.emit()" class="menu-icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Time App</span>
+  </section>
+
+  <button mat-button (click)="logout.emit()"><mat-icon>keyboard_arrow_right</mat-icon>WYLOGUJ</button>
+</mat-toolbar>

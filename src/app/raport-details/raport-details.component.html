@@ -1,0 +1,36 @@
+<section class="raport-details" *ngIf="!isUpdateMode">
+  <section class="header">
+    <h2 mat-dialog-title>
+      <ng-container *ngIf="data.showLeaderOptions">{{ data.raport.user }}: </ng-container>{{ data.raport.month }}
+    </h2>
+    <section *ngIf="data.showLeaderOptions" class="leader-panel-buttons">
+      <button mat-raised-button color="warn" [mat-dialog-close]="{ raport: data.raport, state: 'reject' }">
+        ODRZUĆ
+      </button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="{ raport: data.raport, state: 'accept' }">
+        ZATWIERDŹ
+      </button>
+    </section>
+    <button mat-raised-button color="primary" *ngIf="!data.raport.isClosed" [mat-dialog-close]="data.raport">
+      ZAMKNIJ MIESIĄC
+    </button>
+  </section>
+
+  Suma godzin: {{ data.raport.workedHours }}h / {{ data.raport.hoursInMonth }}h
+  <section mat-dialog-content>
+    <ng-container *ngFor="let week of data.raport.weeks">
+      <app-raport-details-week
+        [week]="week"
+        [isClosed]="data.raport.isClosed"
+        (updateWeek)="updateWeek(week)"
+      ></app-raport-details-week>
+    </ng-container>
+  </section>
+</section>
+
+<app-week-update
+  *ngIf="isUpdateMode"
+  [updatingWeek]="updatingWeek"
+  [updatingMonth]="data.raport.month"
+  (abortUpdate)="isUpdateMode = false"
+></app-week-update>

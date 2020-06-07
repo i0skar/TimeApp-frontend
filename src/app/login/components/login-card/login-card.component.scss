@@ -1,0 +1,27 @@
+@import 'src/styles/abstracts/mixins.scss';
+
+mat-card {
+  width: 370px;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+
+  @include media-max-width(1000px) {
+    width: auto;
+    min-width: 270px;
+    max-width: 370px;
+    top: 50%;
+    left: 50%;
+  }
+
+  mat-form-field {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .login-button {
+    margin-top: 10px;
+    text-align: center;
+  }
+}

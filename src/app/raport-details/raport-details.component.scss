@@ -1,0 +1,15 @@
+@import 'src/styles/abstracts/mixins.scss';
+
+.header {
+  @include display-flex(row, space-between, center);
+}
+
+.leader-panel-buttons {
+  button {
+    margin-left: 5px;
+  }
+}
+
+.raport-details {
+  min-height: 520px;
+}

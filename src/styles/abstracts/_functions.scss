@@ -1,0 +1,12 @@
+@function color($name, $variant) {
+    $color-name: map-get($colors, $name);
+    @if ($color-name == null) {
+      @error "Unknown color name #{$name}.";
+    }
+    $color: map-get($color-name, $variant);
+    @if ($color == null) {
+      @error "Unknown color variant #{$variant}.";
+    }
+    @return $color;
+  }
+  

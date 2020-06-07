@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Usuń pracownika</h2>
+<section class="delete-employee">
+  <mat-icon>delete</mat-icon>
+  <div>
+    Czy na pewno usunąć użytkownika<br />
+    <b>{{ data.employee.name }} {{ data.employee.surname }} </b>?
+  </div>
+</section>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button type="sumbit" mat-dialog-close>Anuluj</button>
+  <button mat-flat-button color="warn" type="sumbit" [mat-dialog-close]="data.employee.id">Usuń</button>
+</mat-dialog-actions>

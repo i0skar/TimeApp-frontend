@@ -1,0 +1,18 @@
+@import 'src/styles/abstracts/mixins.scss';
+
+.week {
+  @include display-flex(row, space-between, center);
+  margin: 10px 0px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+
+  &__week-number {
+    color: #4d4d4d;
+  }
+
+  &__project-names {
+    padding: 5px 10px;
+    color: #858585;
+  }
+}

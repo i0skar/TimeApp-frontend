@@ -1,0 +1,11 @@
+@import 'src/styles/abstracts/mixins.scss';
+
+.delete-employee {
+  @include display-flex(row, space-between, top);
+  height: 80px;
+
+  mat-icon {
+    font-size: 70px;
+    color: #d4d4d4;
+  }
+}

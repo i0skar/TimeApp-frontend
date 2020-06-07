@@ -1,0 +1,9 @@
+@import 'src/styles/abstracts/mixins.scss';
+
+.admin-panel {
+  margin-top: 10px;
+
+  &__header {
+    @include display-flex(row, space-between, center);
+  }
+}

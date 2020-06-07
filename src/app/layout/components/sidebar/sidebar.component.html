@@ -1,0 +1,11 @@
+<section class="sidebar">
+  <ng-container *ngFor="let sidebarLink of sidebarLinks">
+    <div *ngIf="sidebarLink.access.includes(userStatus)">
+      <h3>{{ sidebarLink.group }}</h3>
+      <mat-divider></mat-divider>
+      <mat-nav-list>
+      <a mat-list-item [href]="link.href" *ngFor="let link of sidebarLink.links"> {{ link.name }} </a>
+      </mat-nav-list>
+    </div>
+  </ng-container>
+</section>
