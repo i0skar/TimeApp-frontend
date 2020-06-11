@@ -6,4 +6,5 @@ export interface Week {
     name: string;
     workedHours: number;
   }[];
+  id?: number;
 }

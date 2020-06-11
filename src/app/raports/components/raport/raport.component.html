@@ -1,7 +1,7 @@
 <section class="card" [ngClass]="{ card__closed: raport.isClosed }">
   <div>
     <h2>{{ raport.month }}</h2>
-    <p *ngIf="!raport.isAccepted">Oczekuje na zatwierdzenie</p>
+    <p *ngIf="!raport.isAccepted && raport.isClosed">Oczekuje na zatwierdzenie</p>
     <ng-container *ngIf="!raport.isClosed">
       <p *ngFor="let project of raport.projects">[{{ project.name }}] - {{ project.workedHours }}h</p>
     </ng-container>

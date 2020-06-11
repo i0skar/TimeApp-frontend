@@ -12,16 +12,16 @@ export class ManageRaportsService {
   constructor(private readonly http: HttpClient) {}
 
   getClosedRaports() {
-    let params = new HttpParams();
-    params = params.append('isClosed', 'true');
-    return this.http.get<Raport[]>(`${api}${this.raportsURI}`, { params });
+    // let params = new HttpParams();
+    // params = params.append('isClosed', 'true');
+    return this.http.get<Raport[]>(`${api}${this.raportsURI}/getClosedRaports`);
   }
 
-  acceptRaport(raportId: number, raport: Raport) {
-    return this.http.patch(`${api}${this.raportsURI}/${raportId}`, raport);
+  acceptRaport(raportId: number) {
+    return this.http.patch(`${api}${this.raportsURI}/accept?raportId=${raportId}`, raportId, {responseType: 'text'});
   }
 
-  rejectRaport(raportId: number, raport: Raport) {
-    return this.http.patch(`${api}${this.raportsURI}/${raportId}`, raport);
+  rejectRaport(raportId: number) {
+    return this.http.patch(`${api}${this.raportsURI}/reject?raportId=${raportId}`, raportId, {responseType: 'text'});
   }
 }

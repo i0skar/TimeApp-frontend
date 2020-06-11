@@ -21,7 +21,7 @@ export class WeekUpdateComponent implements OnInit {
   ngOnInit() {
     console.log(this.updatingWeek);
     this.getProjects();
-    this.initializeAddEmployeeForm();
+    this.initializeUpdateWeekForm();
   }
 
   updateWeek() {
@@ -33,7 +33,7 @@ export class WeekUpdateComponent implements OnInit {
     items.push(this.createProjectFormItem());
   }
 
-  private initializeAddEmployeeForm() {
+  private initializeUpdateWeekForm() {
     this.updateWeekForm = this.formBuilder.group({
       projects: this.formBuilder.array([this.createProjectFormItem()]),
     });
@@ -47,6 +47,8 @@ export class WeekUpdateComponent implements OnInit {
   }
 
   private getProjects() {
-    this.projectsService.getProjects().subscribe((res) => (this.projects = res));
+    this.projectsService.getProjects().subscribe((res) => {
+      this.projects = res;
+    });
   }
 }

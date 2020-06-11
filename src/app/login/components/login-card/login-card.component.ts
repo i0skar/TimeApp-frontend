@@ -20,10 +20,12 @@ export class LoginCardComponent implements OnInit {
 
   loginUser() {
     this.loginService.login(this.loginForm.value).subscribe((res: any) => {
-      localStorage.setItem('token', res.accessToken);
-      const decodedToken = jwt_decode(res.accessToken);
-      localStorage.setItem('email', decodedToken.email);
-      localStorage.setItem('status', 'admin');
+      console.log(res);
+      console.log(this.loginForm.value);
+      // localStorage.setItem('token', res.token);
+      // const decodedToken = jwt_decode(res.token);
+      localStorage.setItem('email', this.loginForm.value.email);
+      localStorage.setItem('status', res);
       this.router.navigateByUrl('/layout');
     });
   }

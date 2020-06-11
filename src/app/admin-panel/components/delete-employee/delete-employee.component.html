@@ -1,12 +1,11 @@
-<h2 mat-dialog-title>Usuń pracownika</h2>
+<h2 mat-dialog-title>Zmień status pracownika</h2>
 <section class="delete-employee">
-  <mat-icon>delete</mat-icon>
   <div>
-    Czy na pewno usunąć użytkownika<br />
+    Czy na pewno chcesz zmienić status użytkownika 
     <b>{{ data.employee.name }} {{ data.employee.surname }} </b>?
   </div>
 </section>
 <mat-dialog-actions align="end">
   <button mat-stroked-button type="sumbit" mat-dialog-close>Anuluj</button>
-  <button mat-flat-button color="warn" type="sumbit" [mat-dialog-close]="data.employee.id">Usuń</button>
+  <button mat-flat-button color="warn" type="sumbit" [mat-dialog-close]="data.employee.id">Zmień</button>
 </mat-dialog-actions>

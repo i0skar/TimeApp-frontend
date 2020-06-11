@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { LoginRequest } from './models/login.request';
 
 const api = environment.apiUrl;
+// const api = 'http://localhost:3000';
 
 @Injectable()
 export class LoginService {
@@ -13,6 +14,6 @@ export class LoginService {
 
   login(loginRequest: LoginRequest) {
     const options = {headers: {Authorization: 'Bearer <credentials>'}};
-    return this.http.post(`${api}${this.loginURI}`, loginRequest);
+    return this.http.post(`${api}${this.loginURI}`, loginRequest, {responseType: 'text'});
   }
 }

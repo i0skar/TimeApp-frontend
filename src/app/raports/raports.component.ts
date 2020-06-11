@@ -33,15 +33,13 @@ export class RaportsComponent implements OnInit {
   }
 
   private getRaports() {
-    this.raportsService.getUserRaports(this.userEmail).subscribe((res) => {
-      this.raports = groupArrayByProperty(res, 'isClosed');
+    this.raportsService.getUserRaports(this.userEmail).subscribe((res: any) => {
+      this.raports = groupArrayByProperty(res.raports, 'isClosed');
     });
   }
 
   private closeRaport(closedRaport: Raport) {
-    const updatedRaport = { ...closedRaport };
-    updatedRaport.isClosed = true;
-    this.raportsService.closeRaport(closedRaport.id, updatedRaport).subscribe(() => {
+    this.raportsService.closeRaport(closedRaport.id).subscribe(() => {
       this.getRaports();
     });
   }

@@ -3,5 +3,5 @@ export interface AddEmployeeRequest {
   surname: string;
   email: string;
   password: string;
-  status: string; // 'Kierownik' / 'Pracownik'
+  status: string;
 }

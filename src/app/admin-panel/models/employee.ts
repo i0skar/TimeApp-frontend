@@ -3,5 +3,6 @@ export interface Employee {
   name: string;
   surname: string;
   email: string;
-  status: string; // 'Kierownik' / 'Pracownik'
+  status: string;
+  isActive: boolean;
 }

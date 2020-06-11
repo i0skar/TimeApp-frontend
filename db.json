@@ -369,8 +369,8 @@
           ]
         }
       ],
-      "isClosed": false,
-      "isAccepted": false
+      "isClosed": true,
+      "isAccepted": true
     }
   ],
   "projects": [

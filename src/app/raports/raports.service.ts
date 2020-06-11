@@ -14,10 +14,10 @@ export class RaportsService {
   getUserRaports(email: string) {
     let params = new HttpParams();
     params = params.append('userEmail', email);
-    return this.http.get<Raport[]>(`${api}${this.raportsURI}`, { params });
+    return this.http.get(`${api}${this.raportsURI}`, { params });
   }
 
-  closeRaport(raportId: number, raport: Raport) {
-    return this.http.patch(`${api}${this.raportsURI}/${raportId}`, raport);
+  closeRaport(raportId: number) {
+    return this.http.patch(`${api}${this.raportsURI}/close?raportId=${raportId}`, {closedStatus: true}, {responseType: 'text'});
   }
 }

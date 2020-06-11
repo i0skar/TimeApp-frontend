@@ -1,7 +1,7 @@
 <section class="card">
-  <div>
+  <div [style.text-decoration]="!employee.isActive ? 'line-through' : 'none'">
     <h2>{{ employee.name }} {{ employee.surname }}</h2>
     <p>{{ employee.email }}</p>
   </div>
-  <div><mat-icon (click)="deleteEmployee.emit(employee)">delete</mat-icon></div>
+  <div><mat-icon (click)="deleteEmployee.emit(employee)">flash_on</mat-icon></div>
 </section>

@@ -15,6 +15,5 @@ export class RaportDetailsComponent {
   updateWeek(week: Week) {
     this.isUpdateMode = true;
     this.updatingWeek = week;
-    console.log(week);
   }
 }

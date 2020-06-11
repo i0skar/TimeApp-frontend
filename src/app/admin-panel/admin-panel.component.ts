@@ -29,8 +29,8 @@ export class AdminPanelComponent implements OnInit {
     );
   }
 
-  deleteEmployee(id: number) {
-    this.employeesService.deleteEmployee(id).subscribe(
+  deactivateEmployee(id: number, isActivate: boolean) {
+    this.employeesService.deactivateEmployee(id, !isActivate).subscribe(
       () => this.getEmployees(),
       (err) => this.showErrorSnackbar()
     );
@@ -45,7 +45,7 @@ export class AdminPanelComponent implements OnInit {
     });
   }
 
-  openDeleteEmployeePopup(employee: Employee) {
+  openDeactivateEmployeePopup(employee: Employee) {
     const dialog = this.dialog.open(DeleteEmployeeComponent, {
       data: { employee },
       width: '370px',
@@ -53,7 +53,7 @@ export class AdminPanelComponent implements OnInit {
     });
     dialog.afterClosed().subscribe((id) => {
       if (typeof id === 'number') {
-        this.deleteEmployee(id);
+        this.deactivateEmployee(id, employee.isActive);
       }
     });
   }

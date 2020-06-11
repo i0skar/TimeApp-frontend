@@ -48,22 +48,17 @@ export class LeaderPanelComponent implements OnInit {
   }
 
   private getClosedReports() {
-    this.manageRaportsService.getClosedRaports().subscribe((res) => (this.closedRaports = res));
+    this.manageRaportsService.getClosedRaports().subscribe((res: any) => (this.closedRaports = res.raports));
   }
 
   private acceptRaport(raport: Raport) {
-    const updatedRaport = { ...raport };
-    updatedRaport.isAccepted = true;
-    this.manageRaportsService.acceptRaport(raport.id, updatedRaport).subscribe(() => {
+    this.manageRaportsService.acceptRaport(raport.id).subscribe(() => {
       this.getClosedReports();
     });
   }
 
   private rejectRaport(raport: Raport) {
-    const updatedRaport = { ...raport };
-    updatedRaport.isAccepted = false;
-    updatedRaport.isClosed = false;
-    this.manageRaportsService.rejectRaport(raport.id, updatedRaport).subscribe(() => {
+    this.manageRaportsService.rejectRaport(raport.id).subscribe(() => {
       this.getClosedReports();
     });
   }

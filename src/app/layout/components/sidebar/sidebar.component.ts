@@ -12,17 +12,17 @@ export class SidebarComponent implements OnInit {
     {
       group: 'Raporty',
       links: [{ name: 'Raporty', href: 'layout' }],
-      access: ['pracownik', 'lider', 'admin']
+      access: ['Pracownik', 'Kierownik', 'Admin']
     },
     {
       group: 'Panel kierownika',
       links: [{ name: 'Raporty', href: 'layout/leader-panel' }],
-      access: ['lider', 'admin']
+      access: ['Kierownik', 'Admin']
     },
     {
       group: 'Panel admina',
       links: [{ name: 'Użytkownicy', href: 'layout/admin-panel' }],
-      access: ['admin']
+      access: ['Admin']
     },
   ];
 
