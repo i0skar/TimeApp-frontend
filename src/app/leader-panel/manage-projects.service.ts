@@ -14,4 +14,8 @@ export class ManageProjectsService {
   getProjects() {
     return this.http.get<Project[]>(`${api}${this.projectsURI}`);
   }
+
+  addProject(obj) {
+    return this.http.post(`${api}/raports/addMainProject`, obj);
+  }
 }

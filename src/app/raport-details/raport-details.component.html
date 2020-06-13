@@ -1,4 +1,4 @@
-<section class="raport-details" *ngIf="!isUpdateMode">
+<section class="raport-details" *ngIf="!isUpdateMode && !isEditProjectMode">
   <section class="header">
     <h2 mat-dialog-title>
       <ng-container *ngIf="data.showLeaderOptions">{{ data.raport.user }}: </ng-container>{{ data.raport.month }}
@@ -23,14 +23,16 @@
         [week]="week"
         [isClosed]="data.raport.isClosed"
         (updateWeek)="updateWeek(week)"
+        (editProject)="editProject($event)"
       ></app-raport-details-week>
     </ng-container>
   </section>
 </section>
 
 <app-week-update
-  *ngIf="isUpdateMode"
+  *ngIf="isUpdateMode || isEditProjectMode"
   [updatingWeek]="updatingWeek"
   [updatingMonth]="data.raport.month"
-  (abortUpdate)="isUpdateMode = false"
+  (abortUpdate)="isUpdateMode = false; isEditProjectMode = false"
+  [isEditProjectMode]="isEditProjectMode"
 ></app-week-update>

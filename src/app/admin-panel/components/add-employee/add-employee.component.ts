@@ -25,11 +25,11 @@ export class AddEmployeeComponent implements OnInit {
 
   private initializeAddEmployeeForm() {
     this.addEmployeeForm = this.formBuilder.group({
-      email: [null, [Validators.required, Validators.email]],
-      password: [null, Validators.required],
-      name: [null, Validators.required],
-      surname: [null, Validators.required],
-      status: [null, Validators.required],
+      email: [null, [Validators.required, Validators.email, Validators.minLength(10), Validators.maxLength(50)]],
+      password: [null, [Validators.required, Validators.minLength(8), Validators.maxLength(50)]],
+      name: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(25)]],
+      surname: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(35)]],
+      status: [null, [Validators.required]],
     });
   }
 }

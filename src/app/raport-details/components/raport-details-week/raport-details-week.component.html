@@ -1,11 +1,13 @@
 <section class="week">
   <div>
-    <span class="week__week-number">Tydzień {{ week.week }}: {{ week.workedHours }}h</span>/{{ week.hoursInWeek }}h
+    <span class="week__week-number">Tydzień {{ week.week }}: {{ week.workedHours }}h</span>/{{ week.hoursInWeek }}h 
     <div class="week__project-names">
       <ng-container *ngFor="let project of week.projects">
-        [{{ project.name }}] - {{ project.workedHours }}h<br />
+        [{{ project.name }}] - {{ project.workedHours }}h 
+        <button *ngIf="!isClosed" mat-icon-button (click)="edit(project)"><mat-icon>create</mat-icon></button> 
+        <button *ngIf="!isClosed" mat-icon-button (click)="delete(project)"><mat-icon>delete</mat-icon></button><br />
       </ng-container>
     </div>
   </div>
-  <button mat-stroked-button color="primary" *ngIf="!isClosed" (click)="updateWeek.emit(week)">AKTUALIZUJ</button>
+  <button mat-stroked-button color="primary" *ngIf="!isClosed" (click)="updateWeek.emit(week)">DODAJ PROJEKT</button>
 </section>

@@ -42,6 +42,7 @@ export class AdminPanelComponent implements OnInit {
       if (res != null) {
         this.addEmployee(res);
       }
+      window.location.reload();
     });
   }
 
@@ -65,10 +66,10 @@ export class AdminPanelComponent implements OnInit {
   }
 
   private showErrorSnackbar() {
-    this.snackBar.open('Nie udało się', null, {
-      duration: 500,
-      horizontalPosition: 'end',
-      verticalPosition: 'bottom',
-    });
+  //   this.snackBar.open('Nie udało się', null, {
+  //     duration: 500,
+  //     horizontalPosition: 'end',
+  //     verticalPosition: 'bottom',
+  // });
   }
 }

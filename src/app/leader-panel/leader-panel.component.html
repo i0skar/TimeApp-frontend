@@ -1,6 +1,7 @@
 <mat-tab-group animationDuration="0">
   <mat-tab label="Pracownicy">
     <section class="tab-content">
+      <div *ngIf="closedRaports?.length === 0">Obcenie brak zamkniętych raportów.</div>
       <ng-container *ngFor="let closedRaport of closedRaports">
         <app-closed-raports
           [closedRaport]="closedRaport"
@@ -14,6 +15,15 @@
       <ng-container *ngFor="let project of projects">
         <app-project [project]="project"></app-project>
       </ng-container>
+      <div style="float: right">
+        <button mat-raised-button color="primary" (click)="addMainProject()">
+          <mat-icon>add</mat-icon>Dodaj nowy projekt
+        </button>
+        <mat-form-field appearance="fill">
+          <mat-label>Nazwa</mat-label>
+          <input [formControl]="name" name="name" matInput placeholder="name">
+        </mat-form-field>
+      </div>
     </section>
   </mat-tab>
 </mat-tab-group>

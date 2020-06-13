@@ -11,9 +11,16 @@ export class RaportDetailsComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
   isUpdateMode = false;
   updatingWeek: Week;
+  isEditProjectMode = false;
 
   updateWeek(week: Week) {
     this.isUpdateMode = true;
     this.updatingWeek = week;
+  }
+
+  editProject(week) {
+    this.isEditProjectMode = true;
+    this.updatingWeek = week;
+    console.log(week);
   }
 }

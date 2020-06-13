@@ -5,6 +5,7 @@ import { ManageRaportsService } from './manage-raports.service';
 import { MatDialog } from '@angular/material/dialog';
 import { RaportDetailsComponent } from '../raport-details/raport-details.component';
 import { ManageProjectsService } from './manage-projects.service';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-leader-panel',
@@ -14,6 +15,7 @@ import { ManageProjectsService } from './manage-projects.service';
 export class LeaderPanelComponent implements OnInit {
   closedRaports: Raport[];
   projects: Project[];
+  name = new FormControl('', [Validators.minLength(10), Validators.maxLength(30)]);
 
   constructor(
     public dialog: MatDialog,
@@ -45,6 +47,11 @@ export class LeaderPanelComponent implements OnInit {
           break;
       }
     });
+  }
+
+  addMainProject() {
+    console.log(this.name.value);
+    this.manageProjectsService.addProject({name: this.name.value});
   }
 
   private getClosedReports() {

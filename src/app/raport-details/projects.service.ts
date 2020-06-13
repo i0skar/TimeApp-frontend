@@ -14,4 +14,16 @@ export class ProjectsService {
   getProjects() {
     return this.http.get<Project[]>(`${api}${this.projectsURI}`);
   }
+
+  addProject(obj) {
+    return this.http.post(`${api}/raports/addProject`, obj);
+  }
+
+  deleteProject(id) {
+    return this.http.delete(`${api}/raports/deleteProject?projectId=${id}`);
+  }
+  patchProject(id, obj) {
+    return this.http.patch(`${api}/raports/patchProject?projectId=${id}`, obj);
+  }
 }
+
